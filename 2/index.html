@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ожидание положительных событий</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h2>Ожидание положительных событий</h2>
+        <p>Внимательно прочитайте каждое утверждение и укажите значение от 0 до 100, соответствующее степени вашего согласия по поводу вероятности положительных событий в будущем.</p>
+        
+        <div class="questions">
+            <div v-for="(question, index) in questions" :key="index" class="question">
+                <label :for="'q' + index">{{ question.text }}</label>
+                <input type="number" :id="'q' + index" v-model="question.value" min="0" max="100">
+            </div>
+        </div>
+
+        <button @click="calculateScore">Рассчитать общий счет</button>
+
+        <div class="results" v-if="totalScore !== null">
+            <p>Общий счет: <b>{{ totalScore.toFixed(2) }}</b></p>
+            <p>Ожидания удачливых людей, что положительные события в будущем оправдаются гораздо выше, чем у неудачливых.</p>
+            <div class="result">
+                <div>Неудачливые люди: 0-45</div>
+                <div>Нейтральные люди: 46-74</div>
+                <div>Удачливые люди: 75-100</div>
+            </div>
+            <h4>
+                Я <span class="user-type">{{ userType }}</span> человек
+                <br>Моя оценка: <b>{{ totalScore.toFixed(2) }}</b>
+            </h4>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+</body>
+</html>
