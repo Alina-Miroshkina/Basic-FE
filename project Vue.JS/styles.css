@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    transition: background-color 0.3s;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    color: #3A86FF;
+}
+
+.questions .question {
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+
+.questions .question:hover {
+    transform: translateY(-5px);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider {
+    flex: 1;
+    margin-right: 10px;
+    appearance: none;
+    background: #ddd;
+    border-radius: 5px;
+    height: 6px;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #3A86FF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background: #2a62b3;
+}
+
+.slider-value {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #3A86FF;
+    font-weight: bold;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e9f5ff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.result div {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+h4 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.user-type {
+    font-weight: bold;
+}
+
+.neutral {
+    color: orange;
+}
+
+.lucky {
+    color: green;
+}
+
+.unlucky {
+    color: red;
+}
+
+/* Button to reset values */
+.reset-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #3A86FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.reset-button:hover {
+    background-color: #2a62b3;
+}
